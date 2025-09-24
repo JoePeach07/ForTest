@@ -13,10 +13,13 @@ namespace ForTest
         static void Main(string[] args)
 
         {
+
             Deck deck = new Deck();
             Visual visual = new Visual();
-            deck.SetDeck(3);
-            visual.PrintGAmeDeck(deck.readOnlyGameDeck);
+
+            deck.SetDeck(8);
+            deck.SetPosition(39,0);
+            visual.PrintGameDeck(deck.ReadOnlyGameDeck);
 
         }
     }
