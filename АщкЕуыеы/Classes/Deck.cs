@@ -49,5 +49,21 @@ namespace ForTest.Classes
             }
         }
 
+        // Метод возвращает символ, находящийся в указанной позиции
+        public char GetSymbolOnPosition(int x)
+        {
+            char symbol;
+            symbol = gameDeck[(x - 1) / gameDeck.GetLength(0), (x - 1) % gameDeck.GetLength(1)];
+
+            return (char)symbol;
+
+        }
+
+        // Метод возвращает размерность игрового поля
+        public int GetDeckSize()
+        {
+            return gameDeck.GetLength(0);
+        }
+
     }
 }

@@ -16,11 +16,30 @@ namespace ForTest
 
             Deck deck = new Deck();
             Visual visual = new Visual();
+            Rules rules = new Rules();
+            HumanPlayers humanPlayer = new HumanPlayers();
 
-            deck.SetDeck(8);
-            deck.SetPosition(39,0);
+            deck.SetDeck(3);
+            deck.SetPosition(4,0)
+
+            bool asdf = rules.ValidationPlayerMove(humanPlayer.MakeMove(5), deck.GetDeckSize(), deck.GetSymbolOnPosition(5));
+            if (rules.ValidationPlayerMove(humanPlayer.MakeMove(5), deck.GetDeckSize(), deck.GetSymbolOnPosition(5)) == false) 
+            {
+                Console.WriteLine("Позиция занята, выберите другую");
+            }
+            else
+            {
+                deck.SetPosition(humanPlayer.MakeMove(5), 1);
+                Console.WriteLine("Ход принят");
+            }
+
             visual.PrintGameDeck(deck.ReadOnlyGameDeck);
+
+           
 
         }
     }
 }
+// Ход игрока и позиция для проверки должны совпадать.
+// В дальнейшей реализации позиция для проверки и ход игрока будут записываться в одну переменную внутри метода в классе Program
+// Возможно стоит реализовать метод внутри Rules для возвращения позиции на проверку и хода игрока
