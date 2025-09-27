@@ -5,8 +5,9 @@ namespace ForTest.Classes
 {
     interface PlayerMove
     {
-        // Метод для совершения хода игроком
+        // Метод для совершения хода игроком или ботом
         int MakeMove(int chousenPosition);
+       
     }
 
     internal class HumanPlayers : PlayerMove
@@ -15,6 +16,7 @@ namespace ForTest.Classes
         {
            return chousenPosition;
         }
+
     }
     
 
@@ -24,6 +26,8 @@ namespace ForTest.Classes
     {
         public int MakeMove(int chousenPosition)
         {
+            Random RandomMove = new Random();
+            chousenPosition = RandomMove.Next(1, chousenPosition);
             return chousenPosition;
         }
     }

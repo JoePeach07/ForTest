@@ -18,24 +18,11 @@ namespace ForTest
             Visual visual = new Visual();
             Rules rules = new Rules();
             HumanPlayers humanPlayer = new HumanPlayers();
+            BotPlayers botPlayer = new BotPlayers();
 
-            deck.SetDeck(3);
-            deck.SetPosition(4,0)
-
-            bool asdf = rules.ValidationPlayerMove(humanPlayer.MakeMove(5), deck.GetDeckSize(), deck.GetSymbolOnPosition(5));
-            if (rules.ValidationPlayerMove(humanPlayer.MakeMove(5), deck.GetDeckSize(), deck.GetSymbolOnPosition(5)) == false) 
-            {
-                Console.WriteLine("Позиция занята, выберите другую");
-            }
-            else
-            {
-                deck.SetPosition(humanPlayer.MakeMove(5), 1);
-                Console.WriteLine("Ход принят");
-            }
-
+            deck.SetDeck(3);            
             visual.PrintGameDeck(deck.ReadOnlyGameDeck);
 
-           
 
         }
     }
