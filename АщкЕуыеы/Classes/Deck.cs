@@ -39,13 +39,13 @@ namespace ForTest.Classes
         // Перед установкой символа класс Rules валидирует ход
         public void SetPosition(int x, int token) 
         {
-            if (token == 0)
+            if (token == 1)
             {
                 gameDeck[(x - 1) / gameDeck.GetLength(0), (x - 1) % gameDeck.GetLength(1)] = (char)GameSymbols.X;
             }
-            else if(token == 1)
+            else if(token == 2)
             {
-                gameDeck[(x - 1) / gameDeck.GetLength(0), (x - 1) % gameDeck.GetLength(1)] = (char)GameSymbols.O;
+                gameDeck[(x - 2) / gameDeck.GetLength(0), (x - 1) % gameDeck.GetLength(1)] = (char)GameSymbols.O;
             }
         }
 
@@ -59,7 +59,7 @@ namespace ForTest.Classes
 
         }
 
-        // Метод возвращает размерность игрового поля
+        // Метод возвращает количество строк (или столбцов) в квадратном игровом поле
         public int GetDeckSize()
         {
             return gameDeck.GetLength(0);
