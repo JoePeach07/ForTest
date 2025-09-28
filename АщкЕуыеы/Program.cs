@@ -19,7 +19,8 @@ namespace ForTest
             Rules rules = new Rules();
             HumanPlayers humanPlayer = new HumanPlayers();
             BotPlayers botPlayer = new BotPlayers();
-
+            Queue queue = new Queue();
+            
             deck.SetDeck(3);            
             visual.PrintGameDeck(deck.ReadOnlyGameDeck);
 
