@@ -13,13 +13,15 @@ namespace ForTest.Classes
         // Метод для управления очередностью ходов. Изначально метод получает 1 - X или 2 - O (зависит от выбора игрока в меню игры)
         public int ManageQueue() 
         {
-            if (queueToken % 2 == 0) 
-            {
-                queueToken = 1;
-            } else
-            {
-                queueToken = 2;
-            }
+            // Решил попробовать тернарный оператор. Вроде работает, но чет не вдуплил по началу
+            //if (queueToken % 2 == 0) 
+            //{
+            //    queueToken = 1;
+            //} else
+            //{
+            //    queueToken = 2;
+            //}
+            queueToken = (queueToken == 1) ? 2 : 1;
 
             return queueToken;
         }

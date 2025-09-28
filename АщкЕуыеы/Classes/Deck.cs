@@ -45,9 +45,9 @@ namespace ForTest.Classes
             }
             else if(token == 2)
             {
-                gameDeck[(x - 2) / gameDeck.GetLength(0), (x - 1) % gameDeck.GetLength(1)] = (char)GameSymbols.O;
+                gameDeck[(x - 1) / gameDeck.GetLength(0), (x - 1) % gameDeck.GetLength(1)] = (char)GameSymbols.O;
             }
-        }
+        } //  Был косяк в 1 цифре
 
         // Метод возвращает символ, находящийся в указанной позиции
         public char GetSymbolOnPosition(int x)

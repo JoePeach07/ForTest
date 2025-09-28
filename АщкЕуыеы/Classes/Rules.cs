@@ -21,6 +21,8 @@ namespace ForTest.Classes
             return validation;
         }
 
+        // как и в прошлый раз метод написан "в тупую", но работает
+        // Метод проверяет состояние игрового поля на предмет победы или ничьи
         public int CheckWinCondition(char[,] currentDeck, char checkSymbolX, char checkSymbolO)
         {
             int numberOfOccupiedPositions = 0;
